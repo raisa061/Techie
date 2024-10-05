@@ -1,0 +1,11 @@
+// background image
+        <div className="relative h-20 md:h-35 flex items-center justify-center bg-bg1 bg-no-repeat bg-cover ">
+            {/* overlay */}
+            <div className="absolute inset-0 bg-gray-800 opacity-55"></div>
+            {/* content */}
+            <div className="relative mx-w-sm mx-auto p-8 space-y-2">
+                <h1 className="font-semibold font-poppins text-xl md:text-3xl text-white">Revolutionize Your Business with Lightning-Fast ERP Solutions! <br />Join Us for a Seamless Transformation</h1>
+                <h3 className="text-gray-50 font-semibold font-montserrat text-lg md:text-2xl"> ERP Solutions </h3>
+                <button className="bg-customBlue p-2 w-40 text-white rounded-full font-semibold text-sm md:text-lg ">Get Started</button>
+            </div>
+        </div>

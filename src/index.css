@@ -1,0 +1,77 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+  scroll-behavior: smooth;
+}
+
+@layer utilities {
+    @layer responsive {
+      /* Hide scrollbar for Chrome, Safari and Opera */
+      .no-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+  
+      /* Hide scrollbar for IE, Edge and Firefox */
+      .no-scrollbar {
+        -ms-overflow-style: none; /* IE and Edge */
+        scrollbar-width: none; /* Firefox */
+      }
+    }
+
+    .hover-bg-diagonal {
+      position: relative;
+      overflow: hidden;
+      isolation: isolate;
+      background-color: white; /* Default background color */
+      transition: background-color 0.5s ease; /* Smooth transition */
+    }
+  
+    .hover-bg-diagonal::before {
+      content: "";
+      position: absolute;
+      top: -100%;
+      left: -100%;
+      width: 200%;
+      height: 200%;
+      background: linear-gradient(185deg, #ffffff, #1AC4FA);
+
+      transition: all 0.5s ease;
+      z-index: 0;
+      opacity: 0;
+    }
+  
+    .hover-bg-diagonal:hover::before {
+      top: 0;
+      left: 0;
+      opacity: 1;
+    }
+  
+    .hover-bg-diagonal-content {
+      position: relative;
+      z-index: 1;
+    }
+
+    .contact-bg {
+      background: conic-gradient(blue 0deg 90deg, gray 90deg 270deg, blue 270deg 360deg);
+    }
+    
+  }
+  
+
+@font-face {
+    font-family: 'Opensans';
+    src: url("../fonts/OpenSans-Regular.ttf");
+}
+
+
+@font-face {
+  font-family: 'latoB';
+  src: url("../fonts/Lato-Black.ttf");
+}
+
+@font-face {
+  font-family: 'latoR';
+  src: url("../fonts/Lato-Regular.ttf");
+}
